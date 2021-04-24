@@ -1,0 +1,7 @@
+{
+    "name": "Grovcoin",
+    "symbol": "GROV",
+    "algorithm": "scrypt",
+    "peerMagic": "fcc1b5dc",
+    "peerMagicTestnet": "fdd2c8f1"
+}
