@@ -95,12 +95,14 @@ module.exports = function(logger){
 
 
     //If an html file was changed reload it
-    watch('website', function(filename){
+    //watch('website', function(filename){
+		watch(['./website', './website/pages'], function(evt, filename){
         var basename = path.basename(filename);
         if (basename in pageFiles){
-            console.log(filename);
+            //console.log(filename);
             readPageFiles([basename]);
-            logger.debug(logSystem, 'Server', 'Reloaded file ' + basename);
+            //logger.debug(logSystem, 'Server', 'Reloaded file ' + basename);
+			logger.special(logSystem, 'Server', 'Reloaded file ' + basename);
         }
     });
 
